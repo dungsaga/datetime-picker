@@ -698,7 +698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _this.nguiDatetimePickerEl.addEventListener('mouseup', function (event) {
 	                _this.clickedDatetimePicker = false;
 	                // NOTE: force focus to fix problem "in IE, datetime picker does not close on blur (after clicking inside but not on date numbers or time sliders)"
-	                _this.nguiDatetimePickerEl.focus();
+	                setTimeout(function() { _this.nguiDatetimePickerEl.focus() }, 50);
 	            });
 	            //This is for material design. MD has click event to make blur to happen
 	            _this.nguiDatetimePickerEl.addEventListener('click', function (event) {
