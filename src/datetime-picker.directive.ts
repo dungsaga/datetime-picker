@@ -257,7 +257,7 @@ export class NguiDatetimePickerDirective implements OnInit, OnChanges {
     this.nguiDatetimePickerEl.addEventListener('mouseup', (event) => {
       this.clickedDatetimePicker = false;
       // NOTE: force focus to fix problem "in IE, datetime picker does not close on blur (after clicking inside but not on date numbers or time sliders)"
-      this.nguiDatetimePickerEl.focus();
+      setTimeout(() => { this.nguiDatetimePickerEl.focus() }, 50);
     });
     //This is for material design. MD has click event to make blur to happen
     this.nguiDatetimePickerEl.addEventListener('click', (event) => {
